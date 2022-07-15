@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-
-
+#include "push_swap.h"
 
 /*
 check:
@@ -10,8 +7,30 @@ check:
 3. nothing can be bigger than a integer
 4. no duplicates
 */
-int main(int argc, char *argv[])
-{
-    
 
+int is_number(char *arg)
+{
+	// check if all char in argv is num;
+}
+
+
+void	check_argument(int argc, char **argv)
+{
+	int i;
+
+	if (argc < 2)
+		exit(0);
+	i = 0;
+	while (argv[i] != NULL)
+	{
+		ft_printf("%s\n", argv[i]);
+		i++;
+	}
+	//i = ft_atoi(argv[1]);
+}
+
+int main(int argc, char **argv)
+{   
+	check_argument(argc, argv);
+	return (0);
 }
