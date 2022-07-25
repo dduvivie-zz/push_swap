@@ -16,14 +16,20 @@
 # include "./libft/ft_printf/ft_printf.h"
 # include "./libft/get_next_line/get_next_line.h"
 
+typedef struct s_node	t_node;
+
 // structure
 typedef struct s_node{
-	int				val;
-	struct t_node	*next;
+	int		val;
+	t_node	*next;
 }				t_node;
 
 typedef struct s_list{
-	t_node 	*head;
+	t_node	*head;
+	t_node	*tail;
 }				t_list;
+
+t_list	init_stack(int *stack, int len);
+void	display_stack(t_list *list);
 
 #endif
