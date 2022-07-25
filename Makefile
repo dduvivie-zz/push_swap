@@ -6,7 +6,7 @@ LIBFT		= libft/libft.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 
-SRC			= main.c 
+SRC			= main.c init_stack.c
 OBJ			= $(SRC:.c=.o)
 
 all: $(NAME)
