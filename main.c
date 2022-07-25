@@ -1,36 +1,14 @@
 #include "push_swap.h"
 
-/*
-check:
-1. the number of parameters
-2. all arguments must be integer
-3. nothing can be bigger than a integer
-4. no duplicates
-*/
-
-int is_number(char *arg)
+int	main(void)
 {
-	// check if all char in argv is num;
-}
+	int stack[] = {2, 1, 3, 6, 5, 8};
+	t_list	stack1;
 
-
-void	check_argument(int argc, char **argv)
-{
-	int i;
-
-	if (argc < 2)
-		exit(0);
-	i = 0;
-	while (argv[i] != NULL)
-	{
-		ft_printf("%s\n", argv[i]);
-		i++;
-	}
-	//i = ft_atoi(argv[1]);
-}
-
-int main(int argc, char **argv)
-{   
-	check_argument(argc, argv);
+	stack1 = init_stack(stack, 6);
+	//ft_printf("%d\n", stack1.head->val);
+	//ft_printf("%d\n", stack1.tail->val);
+	//ft_printf("PASS\n");
+	display_stack(&stack1);
 	return (0);
 }
