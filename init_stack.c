@@ -12,44 +12,56 @@ t_node	*new_node(int num)
 	return (node);
 }
 
-void	add_node(t_list *list, int val)
+void	add_node(t_stack *stack, int val)
 {
-	if (list->head == NULL && list->tail == NULL)
+	if (stack->head == NULL && stack->tail == NULL)
 	{
-		list->head = new_node(val);
-		list->tail = list->head;
+		stack->head = new_node(val);
+		stack->tail = stack->head;
 	}
 	else
 	{
-		list->tail->next = new_node(val);
-		list->tail = list->tail->next;
+		stack->tail->next = new_node(val);
+		stack->tail = stack->tail->next;
 	}
 }
 
-t_list	init_stack(int *stack, int len)
+t_stack	init_stack(int *args, int size)
 {
-	t_list	list;
+	t_stack	stack;
 	int		i;
 
-	list.head = NULL;
-	list.tail = NULL;
+	stack.head = NULL;
+	stack.tail = NULL;
+	stack.size = size;
 	i = -1;
-	while (++i < len)
+	while (++i < size)
 	{
-		add_node(&list, stack[i]);
+		add_node(&stack, args[i]);
 	}
-	return (list);
+	return (stack);
 }
 
-void	display_stack(t_list *list)
+void	display_stack(t_stack *stack)
 {
 	t_node	*current_node;
+	int		i;
 
-	current_node = list->head;
+	if (stack->size < 1)
+		return ;
+	current_node = stack->head;
+	i = (stack->size * 2) + 1;
+	while (i-- > 0)
+		ft_printf("-");
+	ft_printf("\n");
 	while (current_node->next != NULL)
 	{
-		ft_printf("%d\n", current_node->val);
+		ft_printf("|%d", current_node->val);
 		current_node = current_node->next;
 	}
-	ft_printf("%d\n", current_node->val);
+	ft_printf("|%d|\n", current_node->val);
+	i = (stack->size * 2) + 1;
+	while (i-- > 0)
+		ft_printf("-");
+	ft_printf("\n");
 }
