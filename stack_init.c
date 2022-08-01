@@ -26,6 +26,13 @@ void	add_node(t_stack *stack, int val)
 	}
 }
 
+void	set_node_index(t_stack *stack)
+{
+	
+
+
+}
+
 t_stack	init_stack(int *args, int size)
 {
 	t_stack	stack;
@@ -39,29 +46,7 @@ t_stack	init_stack(int *args, int size)
 	{
 		add_node(&stack, args[i]);
 	}
+	set_node_index(&stack);
 	return (stack);
 }
 
-void	display_stack(t_stack *stack)
-{
-	t_node	*current_node;
-	int		i;
-
-	if (stack->size < 1)
-		return ;
-	current_node = stack->head;
-	i = (stack->size * 2) + 1;
-	while (i-- > 0)
-		ft_printf("-");
-	ft_printf("\n");
-	while (current_node->next != NULL)
-	{
-		ft_printf("|%d", current_node->val);
-		current_node = current_node->next;
-	}
-	ft_printf("|%d|\n", current_node->val);
-	i = (stack->size * 2) + 1;
-	while (i-- > 0)
-		ft_printf("-");
-	ft_printf("\n");
-}

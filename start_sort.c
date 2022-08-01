@@ -35,7 +35,7 @@ void	start(t_stack *stack_a, t_stack *stack_b)
 	else if (stack_a->size == 3)
 	{
 		ft_printf("Sort 3 numbers\n");
-		sort_3_num(&stack_a);
+		//sort_3_num(&stack_a);
 	}
 	else if (stack_a->size == 4)
 	{
@@ -48,5 +48,8 @@ void	start(t_stack *stack_a, t_stack *stack_b)
 		//sort_5_num(&stack_a);
 	}
 	else
+	{
 		ft_printf("Need radix sort\n");
+		test();
+	}
 }
