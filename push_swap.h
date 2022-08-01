@@ -21,6 +21,7 @@ typedef struct s_node	t_node;
 // structure
 typedef struct s_node{
 	int		val;
+	int		index;
 	t_node	*next;
 }				t_node;
 
@@ -40,6 +41,7 @@ void	start(t_stack *stack_a, t_stack *stack_b);
 void	call_operation(int num, t_stack *stack_a, t_stack *stack_b);
 
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
+void	test(void);
 
 
 #endif
