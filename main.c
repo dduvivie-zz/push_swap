@@ -11,6 +11,7 @@ int	main(void)
 	stack_a = init_stack(args, 6);
 	stack_b = init_stack(NULL, 0);
 	display_stack(&stack_a);
+	display_index(&stack_a);
 	start(&stack_a, &stack_b);
 	return (0);
 }
