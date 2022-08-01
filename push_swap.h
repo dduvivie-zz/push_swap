@@ -33,6 +33,7 @@ typedef struct s_stack{
 
 t_stack	init_stack(int *args, int len);
 void	display_stack(t_stack *stack);
+void	display_index(t_stack *stack);
 void	swap(t_stack *stack);
 void	push(t_stack *stack1, t_stack *stack2);
 void	rotate(t_stack *stack);
