@@ -6,7 +6,7 @@ LIBFT		= libft/libft.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 
-SRC			= main.c stack_init.c stack_utils.c start_sort.c operations.c operation_caller.c radix_sort.c
+SRC			= main.c stack_init.c stack_utils.c stack_index.c start_sort.c operations.c operation_caller.c radix_sort.c
 OBJ			= $(SRC:.c=.o)
 
 all: $(NAME)
