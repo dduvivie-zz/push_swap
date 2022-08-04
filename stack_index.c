@@ -23,35 +23,45 @@ int		get_min_val(t_stack *stack)
 	return (min);
 }
 
+t_node	*honyahonya(t_stack *stack, int prev_small_val)
+{
+	t_node	*current_node;
+	int		size;
+	int		current_min_diff;
+	int		diff;
+	t_node	*next_big_node;
+
+	current_node = stack->head;
+	size = stack->size;
+	current_min_diff = current_node->val - prev_small_val;
+	while (size-- > 0)
+	{
+		diff = current_node->val - prev_small_val;
+		if (diff < current_min_diff && diff > 0)
+		{
+			current_min_diff = diff;
+			next_big_node = current_node;			
+		}
+		current_node = current_node->next;
+	}
+	return (next_big_node);
+}
+
+
 void	set_node_index(t_stack *stack)
 {
-	int 	nannka;
-	int		diff;
-	int     current_min_diff;
+	int 	prev_small_val;
 	int		index;
-	int     size;
-	t_node	*current_node;
-	t_node  *index_node;
+	t_node  *next_big_node;
 	
-	nannka = get_min_val(stack);
+	prev_small_val = get_min_val(stack);
 	index = 0;
 	while (++index < stack->size) // 1, 2, 3, 4, 5
 	{
-		current_node = stack->head;
-		size = stack->size;
-		current_min_diff = current_node->val - nannka;
-		while (size-- > 0) // 6, 5, 4, 3, 2, 1
-		{
-			diff = current_node->val - nannka;
-			if (diff < current_min_diff && diff > 0)
-			{
-				current_min_diff = diff;
-				index_node = current_node;
-			}
-			current_node = current_node->next;
-		}
-		ft_printf("val: %d, index: %d\n", index_node->val, index);
-		index_node->index = index;
-		nannka = index_node->val;
+		next_big_node = honyahonya(stack, prev_small_val);
+
+		ft_printf("val: %d, index: %d\n", next_big_node->val, index);
+		next_big_node->index = index;
+		prev_small_val = next_big_node->val;
 	}
 }
