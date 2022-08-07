@@ -85,6 +85,4 @@ void	call_operation(int num, t_stack *stack_a, t_stack *stack_b)
 		call_rotate(num, stack_a, stack_b);
 	else if (num >= 8 && num <= 10)
 		call_reverse_rotate(num, stack_a, stack_b);
-	display_stack(stack_a);
-	display_stack(stack_b);
 }

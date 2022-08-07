@@ -60,22 +60,21 @@ t_node	*honyahonya(t_stack *stack, int prev_small_val)
 		if (diff < current_min_diff && diff > 0)
 		{
 			current_min_diff = diff;
-			node = current_node;			
+			node = current_node;
 		}
 		current_node = current_node->next;
 	}
 	return (node);
 }
 
-
 void	set_node_index(t_stack *stack)
 {
 	int		index;
-	int 	prev_small_val;
-	t_node  *current_small_node;
-	
+	int		prev_small_val;
+	t_node	*current_small_node;
+
 	index = 0;
-	while (index < stack->size) // 0, 1, 2, 3, 4, 5
+	while (index < stack->size)
 	{
 		if (index == 0)
 		{

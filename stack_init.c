@@ -2,7 +2,7 @@
 
 t_node	*new_node(int num)
 {
-	t_node *node;
+	t_node	*node;
 
 	node = malloc(sizeof(t_node));
 	if (!node)
@@ -44,4 +44,3 @@ t_stack	init_stack(int *args, int size)
 		set_node_index(&stack);
 	return (stack);
 }
-
