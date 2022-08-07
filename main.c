@@ -2,13 +2,13 @@
 
 int	main(void)
 {
-	int args[] = {-69, 0, 100, 50, 10, 8};
+	int args[] = {40, 10, 20, 30};
 	t_stack	stack_a;
 	t_stack	stack_b;
 
 	//if (!arguments_is_correct(argc, argv))
 	//	return (0);
-	stack_a = init_stack(args, 6);
+	stack_a = init_stack(args, 4);
 	stack_b = init_stack(NULL, 0);
 	display_stack(&stack_a);
 	display_index(&stack_a);
