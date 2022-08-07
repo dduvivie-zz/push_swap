@@ -36,7 +36,7 @@ void	set_node_index(t_stack *stack);
 
 void	display_stack(t_stack *stack);
 void	display_index(t_stack *stack);
-int		stack_is_sort(t_stack *stack);
+int		stack_is_sort(t_node *node);
 
 void	swap(t_stack *stack);
 void	push(t_stack *stack1, t_stack *stack2);
@@ -46,7 +46,8 @@ void	start(t_stack *stack_a, t_stack *stack_b);
 void	call_operation(int num, t_stack *stack_a, t_stack *stack_b);
 
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
-void	test(t_stack *a, t_stack *b);
-
+void	sort_2_num(t_stack *stack_a, t_stack *stack_b);
+void	sort_3_num(t_stack *a, t_stack *b);
+void	sort_4_num(t_stack *a, t_stack *b);
 
 #endif
