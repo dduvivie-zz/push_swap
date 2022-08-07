@@ -50,6 +50,6 @@ void	start(t_stack *stack_a, t_stack *stack_b)
 	else
 	{
 		ft_printf("Need radix sort\n");
-		test();
+		test(stack_a, stack_b);
 	}
 }

@@ -11,28 +11,46 @@
 //	return ;
 //}
 
-void    print_binary(int num)
+void	sort_nth_digit(t_stack *a, t_stack *b, int digits)
 {
-	int i;
+		t_node	*curr_a_node;
+		t_node	*curr_b_node;
+		int		a_size;
+		int		i;
+		int		num;
 
-	i = 0;
-	while (i++ < 32)
-	{
-		if (num & 1)
-			ft_printf("1");
-		else
-			ft_printf("0");
-		num = num >> 1;
-	}
-	ft_printf("\n");
+		curr_a_node = a->head;
+		curr_b_node = b->head;
+		a_size = a->size;
+		while (a_size-- > 0)
+		{
+			i = 0;
+			num = curr_a_node->inde;
+			while (i++ < digits)
+				num = num >> 1;
+			if ((curr_a_node->index & 1) == 1)
+				call_operation(5, a, b);
+			else
+				call_operation(4, a, b);
+			
+		}
 }
 
-void	test(void)
+void	test(t_stack *a, t_stack *b)
 {
-	int num1 = -2147483648;
-	int num2 = -8;
+	int		digit;
+	int		a_size;
+	t_node	*curr_a_node;
+	t_node	*curr_b_node;
 
-	print_binary(num1);
-	print_binary(num2);
+	ft_printf("stack is sort: %d\n", stack_is_sort(a));
+	digit = 0;
+	while (!stack_is_sort(a))
+	{
+		sort_nth_digit(digit);
+		digit++; // 1, 2, 3, 4, 5 ... max 32
+	}
+
+
 }
 

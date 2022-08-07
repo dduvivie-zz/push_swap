@@ -1,5 +1,20 @@
 #include "push_swap.h"
 
+int		stack_is_sort(t_stack *stack)
+{
+	t_node	*current_node;
+
+	current_node = stack->head;
+	while (current_node->next != NULL)
+	{
+		if (current_node->val > current_node->next->val)
+			return (0);
+		current_node = current_node->next;
+	}
+	return (1);
+}
+
+
 void	display_stack(t_stack *stack)
 {
 	t_node	*current_node;

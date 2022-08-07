@@ -2,7 +2,7 @@
 
 int	main(void)
 {
-	int args[] = {100, 8, -20, 50, 10, -6};
+	int args[] = {-69, 0, 100, 50, 10, 8};
 	t_stack	stack_a;
 	t_stack	stack_b;
 
@@ -15,3 +15,7 @@ int	main(void)
 	start(&stack_a, &stack_b);
 	return (0);
 }
+
+// 2147483647
+// -2147483648
+//	int args[] = {-69, 0, 100, 50, 10, 8};
