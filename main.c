@@ -2,7 +2,7 @@
 
 int	main(void)
 {
-	int args[] = {40, 10, 20, 30};
+	int args[] = {300, 200, 100, 0};
 	t_stack	stack_a;
 	t_stack	stack_b;
 
