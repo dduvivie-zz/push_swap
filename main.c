@@ -1,18 +1,25 @@
 #include "push_swap.h"
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	int args[] = {300, 200, 100, 0};
-	t_stack	stack_a;
-	t_stack	stack_b;
+	//t_stack	stack_a;
+	//t_stack	stack_b;
+	int			*int_list;
 
-	//if (!arguments_is_correct(argc, argv))
-	//	return (0);
-	stack_a = init_stack(args, 4);
-	stack_b = init_stack(NULL, 0);
-	display_stack(&stack_a);
-	display_index(&stack_a);
-	start(&stack_a, &stack_b);
+	if (argc < 2)
+		return (0);
+	int_list = NULL;
+	if (!args_are_correct(argc, argv, int_list))
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
+	//stack_a = init_stack(argc, 4);
+	//stack_b = init_stack(NULL, 0);
+	// free(int_list);
+	//display_stack(&stack_a);
+	//display_index(&stack_a);
+	//start(&stack_a, &stack_b);
 	return (0);
 }
 

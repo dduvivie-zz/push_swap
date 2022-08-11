@@ -31,6 +31,7 @@ typedef struct s_stack{
 	int		size;
 }				t_stack;
 
+int		args_are_correct(int argc, char *argv[], int *int_list);
 t_stack	init_stack(int *args, int len);
 void	set_node_index(t_stack *stack);
 
