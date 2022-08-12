@@ -66,9 +66,6 @@ int	args_are_correct(int argc, char *argv[], int *int_list)
 	int			list_i;
 	long int	num;
 
-	int_list = malloc((argc - 1) * sizeof(int));
-	if (!int_list)
-		return (0);
 	argv_i = 0;
 	list_i = 0;
 	while (++argv_i < argc)
