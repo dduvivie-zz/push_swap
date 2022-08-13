@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_args.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/12 12:57:05 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-/* Convert a string to long int */
+/* Convert a char string to a long int */
 long	str_to_num(const char *str)
 {
 	long int	num;
@@ -23,7 +34,7 @@ long	str_to_num(const char *str)
 	return (num);
 }
 
-/* check if the argument is not duplicated */
+/* Check if the argument is not duplicated */
 int	arg_is_duplicated(int num, int *int_list, int num_i)
 {
 	int	i;
@@ -38,7 +49,7 @@ int	arg_is_duplicated(int num, int *int_list, int num_i)
 	return (0);
 }
 
-/* check if the argument contains only digits */
+/* Check if the argument contains only digits */
 int	arg_is_num(char *arg)
 {
 	int	i;
