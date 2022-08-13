@@ -1,12 +1,12 @@
 #include "push_swap.h"
 
-void	sort_2_num(t_stack *stack_a, t_stack *stack_b)
+void	sort_2_int(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a->head->val > stack_a->head->next->val)
 		call_operation(0, stack_a, stack_b);
 }
 
-void	sort_3_num(t_stack *a, t_stack *b)
+void	sort_3_int(t_stack *a, t_stack *b)
 {
 	int	head;
 	int	mid;

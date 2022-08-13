@@ -47,8 +47,10 @@ void	start(t_stack *stack_a, t_stack *stack_b);
 void	call_operation(int num, t_stack *stack_a, t_stack *stack_b);
 
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
-void	sort_2_num(t_stack *stack_a, t_stack *stack_b);
-void	sort_3_num(t_stack *a, t_stack *b);
-void	sort_4_num(t_stack *a, t_stack *b);
+void	sort_2_int(t_stack *stack_a, t_stack *stack_b);
+void	sort_3_int(t_stack *a, t_stack *b);
+void	sort_4_int(t_stack *a, t_stack *b);
+void	sort_5_int(t_stack *a, t_stack *b);
+void	free_stack(t_stack *stack, int error_flag);
 
 #endif

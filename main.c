@@ -19,12 +19,11 @@ int	main(int argc, char *argv[])
 	stack_a = init_stack(int_list, argc - 1);
 	stack_b = init_stack(NULL, 0);
 	free(int_list);
-	display_stack(&stack_a);
-	display_index(&stack_a);
+	//display_stack(&stack_a);
+	//display_index(&stack_a);
 	start(&stack_a, &stack_b);
+	free_stack(&stack_a, 0);
+	free_stack(&stack_b, 0);
+	system("leaks push_swap > .leaks_log.txt");
 	return (0);
 }
-
-// 2147483647
-// -2147483648
-//	int args[] = {-69, 0, 100, 50, 10, 8};

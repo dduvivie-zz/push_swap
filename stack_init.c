@@ -1,5 +1,6 @@
 #include "push_swap.h"
 
+/* malloc memory for a new node structure */
 t_node	*new_node(int num)
 {
 	t_node	*node;
@@ -23,10 +24,13 @@ void	add_node(t_stack *stack, int val)
 	else
 	{
 		stack->tail->next = new_node(val);
+		if (stack->tail->next == NULL)
+			free_stack(stack, 1);
 		stack->tail = stack->tail->next;
 	}
 }
 
+/* init the stack (linked list) */
 t_stack	init_stack(int *args, int size)
 {
 	t_stack	stack;

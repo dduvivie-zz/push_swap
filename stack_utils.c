@@ -1,5 +1,21 @@
 #include "push_swap.h"
 
+void	free_stack(t_stack *stack, int error_flag)
+{
+	t_node	*current_node;
+	t_node	*prev_node;
+
+	current_node = stack->head;
+	while (current_node != NULL)
+	{
+		prev_node = current_node;
+		current_node = current_node->next;
+		free(prev_node);
+	}
+	if (error_flag == 1)
+		exit(0);
+}
+
 int	stack_is_sort(t_node *node)
 {
 	while (node->next != NULL)

@@ -14,7 +14,7 @@ void	head_index_is_0(t_stack *a, t_stack *b)
 	else
 	{
 		call_operation(4, a, b);
-		sort_3_num(a, b);
+		sort_3_int(a, b);
 		call_operation(3, a, b);
 	}
 }
@@ -68,7 +68,7 @@ void	head_index_is_3(t_stack *a, t_stack *b)
 		call_operation(5, a, b);
 }
 
-void	sort_4_num(t_stack *a, t_stack *b)
+void	sort_4_int(t_stack *a, t_stack *b)
 {
 	int	head;
 

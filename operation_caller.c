@@ -1,6 +1,5 @@
 #include "push_swap.h"
 
-
 void	call_swap(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num == 0)
