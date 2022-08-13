@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 12:57:05 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-/* malloc memory for a new node structure */
+/* Create a new node, allocate memory for a new node structure */
 t_node	*new_node(int num)
 {
 	t_node	*node;
@@ -14,6 +25,7 @@ t_node	*new_node(int num)
 	return (node);
 }
 
+/* Add a new node to the stack */
 void	add_node(t_stack *stack, int val)
 {
 	if (stack->head == NULL && stack->tail == NULL)
@@ -30,7 +42,7 @@ void	add_node(t_stack *stack, int val)
 	}
 }
 
-/* init the stack (linked list) */
+/* Init the stack */
 t_stack	init_stack(int *args, int size)
 {
 	t_stack	stack;
