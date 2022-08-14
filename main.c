@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 	stack_a = init_stack(int_list, argc - 1);
 	stack_b = init_stack(NULL, 0);
 	free(int_list);
-	start(&stack_a, &stack_b);
+	start_sort(&stack_a, &stack_b);
 	free_stack(&stack_a, 0);
 	free_stack(&stack_b, 0);
 	system("leaks push_swap > .leaks_log.txt");
