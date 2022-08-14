@@ -21,7 +21,7 @@ t_node	*new_node(int num)
 		return (NULL);
 	node->val = num;
 	node->next = NULL;
-	node->index = -1;
+	node->order = -1;
 	return (node);
 }
 
