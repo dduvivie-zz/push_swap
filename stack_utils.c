@@ -76,10 +76,10 @@ void	display_node_order(t_stack *stack)
 	current_node = stack->head;
 	while (current_node->next != NULL)
 	{
-		ft_printf("|%d", current_node->index);
+		ft_printf("|%d", current_node->order);
 		current_node = current_node->next;
 	}
-	ft_printf("|%d|\n", current_node->index);
+	ft_printf("|%d|\n", current_node->order);
 	i = (stack->size * 2) + 1;
 	while (i-- > 0)
 		ft_printf("-");
