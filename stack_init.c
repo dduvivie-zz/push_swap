@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-/* Create a new node, allocate memory for a new node structure */
+/* Create a new node, allocate memory for the new node */
 t_node	*new_node(int num)
 {
 	t_node	*node;
@@ -25,7 +25,7 @@ t_node	*new_node(int num)
 	return (node);
 }
 
-/* Add a new node to the stack */
+/* Add the new node to the stack */
 void	add_node(t_stack *stack, int val)
 {
 	if (stack->head == NULL && stack->tail == NULL)
@@ -57,6 +57,6 @@ t_stack	init_stack(int *args, int size)
 		add_node(&stack, args[i]);
 	}
 	if (stack.size > 0)
-		set_node_index(&stack);
+		set_node_order(&stack);
 	return (stack);
 }
