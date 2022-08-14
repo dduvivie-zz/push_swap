@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   start_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 12:57:05 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void	start(t_stack *stack_a, t_stack *stack_b)
+/* Call the sort function, depend on the size of the stack */
+void	start_sort(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_is_sort(stack_a->head) || stack_a->size == 1)
 		return ;
