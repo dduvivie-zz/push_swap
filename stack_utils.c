@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 12:57:05 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
+/* Free all memory allecated by malloc */
 void	free_stack(t_stack *stack, int error_flag)
 {
 	t_node	*current_node;
@@ -16,6 +28,7 @@ void	free_stack(t_stack *stack, int error_flag)
 		exit(0);
 }
 
+/* Check if the stack is sorted in ascending order */
 int	stack_is_sort(t_node *node)
 {
 	while (node->next != NULL)
@@ -27,6 +40,7 @@ int	stack_is_sort(t_node *node)
 	return (1);
 }
 
+/* Display the integer number of each node */
 void	display_stack(t_stack *stack)
 {
 	t_node	*current_node;
@@ -51,7 +65,8 @@ void	display_stack(t_stack *stack)
 	ft_printf("\n");
 }
 
-void	display_index(t_stack *stack)
+/* Display the order number of each node. The min int has 0 as order */
+void	display_node_order(t_stack *stack)
 {
 	t_node	*current_node;
 	int		i;
