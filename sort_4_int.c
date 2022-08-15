@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_4_int.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 15:27:38 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/15 15:27:39 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 void	head_order_is_0(t_stack *a, t_stack *b)
@@ -68,6 +79,10 @@ void	head_order_is_3(t_stack *a, t_stack *b)
 		call_operation(5, a, b);
 }
 
+/* 
+Sort 4 inegers.
+Do operations according to the first node order number.
+*/
 void	sort_4_int(t_stack *a, t_stack *b)
 {
 	int	head;
