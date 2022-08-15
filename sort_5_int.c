@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_5_int.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 16:02:28 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/15 16:02:29 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
+/* Re-apply the order number to each node. */
 void	update_node_order(t_stack *a)
 {
 	t_node	*current_node;
@@ -12,6 +24,11 @@ void	update_node_order(t_stack *a)
 	}
 }
 
+/*
+Sort 5 integers.
+Do opertions to place the minimum node at the top of stack a, 
+push it to stack b then call the sort_4_int function.
+*/
 void	sort_5_int(t_stack *a, t_stack *b)
 {
 	while (a->head->order != 0)
