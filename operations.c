@@ -1,5 +1,6 @@
 #include "push_swap.h"
 
+/**/
 void	swap(t_stack *stack)
 {
 	t_node	*first_node;

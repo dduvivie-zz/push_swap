@@ -1,14 +1,14 @@
 #include "push_swap.h"
 
-void	head_index_is_0(t_stack *a, t_stack *b)
+void	head_order_is_0(t_stack *a, t_stack *b)
 {
 	int	second;
 	int	third;
 	int	tail;
 
-	second = a->head->next->index;
-	third = a->head->next->next->index;
-	tail = a->tail->index;
+	second = a->head->next->order;
+	third = a->head->next->next->order;
+	tail = a->tail->order;
 	if ((second == 3) && (third == 1) && (tail == 2))
 		call_operation(0, a, b);
 	else
@@ -19,15 +19,15 @@ void	head_index_is_0(t_stack *a, t_stack *b)
 	}
 }
 
-void	head_index_is_1(t_stack *a, t_stack *b)
+void	head_order_is_1(t_stack *a, t_stack *b)
 {
 	int	second;
 	int	third;
 	int	tail;
 
-	second = a->head->next->index;
-	third = a->head->next->next->index;
-	tail = a->tail->index;
+	second = a->head->next->order;
+	third = a->head->next->next->order;
+	tail = a->tail->order;
 	if (second == 0 || (second == 3 && third == 0))
 		call_operation(0, a, b);
 	else if ((second == 2 && third == 0) || (second == 3 && third == 2))
@@ -36,30 +36,30 @@ void	head_index_is_1(t_stack *a, t_stack *b)
 		call_operation(8, a, b);
 }
 
-void	head_index_is_2(t_stack *a, t_stack *b)
+void	head_order_is_2(t_stack *a, t_stack *b)
 {
 	int	second;
 	int	third;
 	int	tail;
 
-	second = a->head->next->index;
-	third = a->head->next->next->index;
-	tail = a->tail->index;
+	second = a->head->next->order;
+	third = a->head->next->next->order;
+	tail = a->tail->order;
 	if (second == 3 || (second == 0 && third == 3))
 		call_operation(5, a, b);
 	else if (second == 1 || (second == 0 && third == 1))
 		call_operation(0, a, b);
 }
 
-void	head_index_is_3(t_stack *a, t_stack *b)
+void	head_order_is_3(t_stack *a, t_stack *b)
 {
 	int	second;
 	int	third;
 	int	tail;
 
-	second = a->head->next->index;
-	third = a->head->next->next->index;
-	tail = a->tail->index;
+	second = a->head->next->order;
+	third = a->head->next->next->order;
+	tail = a->tail->order;
 	if (second == 1 && third == 2)
 		call_operation(8, a, b);
 	else if (second == 2)
@@ -74,14 +74,14 @@ void	sort_4_int(t_stack *a, t_stack *b)
 
 	while (!stack_is_sort(a->head))
 	{
-		head = a->head->index;
+		head = a->head->order;
 		if (head == 0)
-			head_index_is_0(a, b);
+			head_order_is_0(a, b);
 		else if (head == 1)
-			head_index_is_1(a, b);
+			head_order_is_1(a, b);
 		else if (head == 2)
-			head_index_is_2(a, b);
+			head_order_is_2(a, b);
 		else
-			head_index_is_3(a, b);
+			head_order_is_3(a, b);
 	}
 }

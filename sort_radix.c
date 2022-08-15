@@ -12,7 +12,7 @@ void	sort_nth_digit(t_stack *a, t_stack *b, int digits)
 	{
 		curr_a_node = a->head;
 		i = 0;
-		num = curr_a_node->index;
+		num = curr_a_node->order;
 		while (i++ < digits)
 			num = num >> 1;
 		if ((num & 1) == 1)
