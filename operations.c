@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operations.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 14:45:53 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/15 14:45:54 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-/**/
+/*
+Swap the first 2 elements at the top of the stack.
+Do nothing if there is only one or no elements.
+*/
 void	swap(t_stack *stack)
 {
 	t_node	*first_node;
@@ -20,6 +34,10 @@ void	swap(t_stack *stack)
 	}
 }
 
+/*
+Take the first element at the top of stack1 and put it at the top of stack2.
+Do nothing if stack1 is empty.
+*/
 void	push(t_stack *stack1, t_stack *stack2)
 {
 	t_node	*head1;
@@ -40,6 +58,10 @@ void	push(t_stack *stack1, t_stack *stack2)
 		stack1->tail = NULL;
 }
 
+/*
+Shift up all elements of the stack by 1.
+The first element becomes the last one.
+*/
 void	rotate(t_stack *stack)
 {
 	t_node	*new_head;
@@ -53,6 +75,10 @@ void	rotate(t_stack *stack)
 	stack->head = new_head;
 }
 
+/*
+Shift down all elements of the stack by 1.
+The last element becomes the first one.
+*/
 void	reverse_rotate(t_stack *stack)
 {
 	t_node	*new_tail;
