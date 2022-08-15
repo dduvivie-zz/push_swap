@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operation_caller.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 14:45:01 by dduvivie          #+#    #+#             */
+/*   Updated: 2022/08/15 14:45:05 by dduvivie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
+/* Call "sa", "sb" or "ss" operation and print it. */
 void	call_swap(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num == 0)
@@ -20,6 +32,7 @@ void	call_swap(int num, t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+/* Call "pa" or "pb" and print it. */
 void	call_push(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num == 3)
@@ -34,6 +47,7 @@ void	call_push(int num, t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+/* Call "ra", "rb" or "rr" and print it. */
 void	call_rotate(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num == 5)
@@ -54,6 +68,7 @@ void	call_rotate(int num, t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+/* Call "rra", "rrb" or "rrr" and print it. */
 void	call_reverse_rotate(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num == 8)
@@ -74,6 +89,19 @@ void	call_reverse_rotate(int num, t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+/*
+num = 0:  sa
+num = 1:  sb
+num = 2:  ss
+num = 3:  pa
+num = 4:  pb
+num = 5:  ra
+num = 6:  rb
+num = 7:  rr
+num = 8:  rra
+num = 9:  rrb
+num = 10: rrr
+*/
 void	call_operation(int num, t_stack *stack_a, t_stack *stack_b)
 {
 	if (num >= 0 && num <= 2)
