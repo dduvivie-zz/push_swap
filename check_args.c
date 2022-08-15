@@ -79,6 +79,10 @@ int	args_are_correct(int argc, char *argv[], int *int_list)
 
 	argv_i = 0;
 	list_i = 0;
+
+	int_list = malloc((argc - 1) * sizeof(int));
+	if (!int_list)
+		return (0);
 	while (++argv_i < argc)
 	{
 		if (!arg_is_num(argv[argv_i]))
@@ -92,4 +96,15 @@ int	args_are_correct(int argc, char *argv[], int *int_list)
 		list_i++;
 	}
 	return (1);
+}
+
+int	*get_int_list(int argc, char *argv[])
+{
+	int	*int_list;
+	int	total_arg;
+
+	if (argc == 2)
+		total_arg = count_total_int(argv[1]);
+
+	else
 }

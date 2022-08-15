@@ -19,10 +19,8 @@ int	main(int argc, char *argv[])
 
 	if (argc < 2)
 		return (0);
-	int_list = malloc((argc - 1) * sizeof(int));
+	int_list = get_int_list(argc, argv);
 	if (!int_list)
-		return (0);
-	if (!args_are_correct(argc, argv, int_list))
 	{
 		ft_printf("Error\n");
 		return (0);
