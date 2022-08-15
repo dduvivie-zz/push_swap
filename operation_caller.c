@@ -90,6 +90,7 @@ void	call_reverse_rotate(int num, t_stack *stack_a, t_stack *stack_b)
 }
 
 /*
+Call operations. Each number represent the operation to call.
 num = 0:  sa
 num = 1:  sb
 num = 2:  ss
