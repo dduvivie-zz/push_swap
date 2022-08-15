@@ -19,6 +19,7 @@ CFLAGS		= -Wall -Wextra -Werror
 
 SRC			= main.c 			\
 			check_args.c 		\
+			check_args_utils.c	\
 			stack_init.c 		\
 			stack_utils.c 		\
 			set_node_order.c 	\
@@ -29,6 +30,7 @@ SRC			= main.c 			\
 			sort_5_int.c 		\
 			sort_4_int.c 		\
 			sort_less_3_int.c
+			
 OBJ			= $(SRC:.c=.o)
 
 all: $(NAME)
