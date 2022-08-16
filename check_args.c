@@ -71,40 +71,26 @@ Return 1 (True) if:
 - all arguments are integers
 - there are no duplicates
 */
-int	args_are_correct(int argc, char *argv[], int *int_list)
+int	args_are_correct(t_args *args, char **str_t)
 {
-	int			argv_i;
-	int			list_i;
+	int			i;
 	long int	num;
 
-	argv_i = 0;
-	list_i = 0;
-
-	int_list = malloc((argc - 1) * sizeof(int));
-	if (!int_list)
+	i = 0;
+	args->array = malloc(args->size * sizeof(int));
+	if (!args->array)
 		return (0);
-	while (++argv_i < argc)
+	while (i < args->size)
 	{
-		if (!arg_is_num(argv[argv_i]))
+		if (!arg_is_num(str_t[i]))
 			return (0);
-		num = str_to_num(argv[argv_i]);
+		num = str_to_num(str_t[i]);
 		if (num > INT_MAX || num < INT_MIN)
 			return (0);
-		if (arg_is_duplicated((int)num, int_list, list_i))
+		if (arg_is_duplicated((int)num, args->array, i))
 			return (0);
-		int_list[list_i] = (int)num;
-		list_i++;
+		args->array[i] = (int)num;
+		i++;
 	}
 	return (1);
-}
-
-int	*get_int_list(int argc, char *argv[])
-{
-	int	*int_list;
-	int	total_arg;
-
-	if (argc == 2)
-		total_arg = count_total_int(argv[1]);
-
-	else
 }
