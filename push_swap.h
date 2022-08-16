@@ -31,7 +31,13 @@ typedef struct s_stack{
 	int		size;
 }				t_stack;
 
-int		args_are_correct(int argc, char *argv[], int *int_list);
+typedef struct s_args{
+	int		*array;
+	int		size;
+}				t_args;
+
+t_args	*get_int_array(int argc, char *argv[]);
+int		args_are_correct(t_args *args, char **str_t);
 t_stack	init_stack(int *args, int len);
 void	set_node_order(t_stack *stack);
 void	display_stack(t_stack *stack);
@@ -53,4 +59,11 @@ void	sort_2_int(t_stack *stack_a, t_stack *stack_b);
 void	sort_3_int(t_stack *a, t_stack *b);
 void	sort_4_int(t_stack *a, t_stack *b);
 void	sort_5_int(t_stack *a, t_stack *b);
+
+/* malloc free functions */
+int		error_exit(t_args *args);
+void	free_args(t_args *args);
+void	free_stack(t_stack *stack, int error_flag);
+void	free_str_array(char **t);
+
 #endif
