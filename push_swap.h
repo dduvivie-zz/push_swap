@@ -6,7 +6,7 @@
 /*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:27:57 by dduvivie          #+#    #+#             */
-/*   Updated: 2022/07/15 15:27:59 by dduvivie         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:03:24 by dduvivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 # include "./libft/libft.h"
 # include "./libft/ft_printf/ft_printf.h"
 # include "./libft/get_next_line/get_next_line.h"
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_node	t_node;
 
-// structure
+/* structures */
 typedef struct s_node{
 	int		val;
 	int		order;
