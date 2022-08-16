@@ -38,7 +38,6 @@ void	free_args(t_args *args)
 		free(args);
 		args = NULL;
 	}
-	return (0);
 }
 
 /* Free stack struct memory */
