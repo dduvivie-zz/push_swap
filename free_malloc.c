@@ -55,5 +55,5 @@ void	free_stack(t_stack *stack, int error_flag)
 		free(prev_node);
 	}
 	if (error_flag == 1)
-		exit(0);
+		exit(1);
 }
