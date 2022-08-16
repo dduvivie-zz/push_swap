@@ -6,7 +6,7 @@
 /*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:57:05 by dduvivie          #+#    #+#             */
-/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:20:08 by dduvivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -82,6 +82,8 @@ int	args_are_correct(t_args *args, char **str_t)
 		return (0);
 	while (i < args->size)
 	{
+		if (!ft_strlen(str_t[i]))
+			return (0);
 		if (!arg_is_num(str_t[i]))
 			return (0);
 		num = str_to_num(str_t[i]);
