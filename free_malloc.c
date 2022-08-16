@@ -6,7 +6,7 @@
 /*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:57:05 by dduvivie          #+#    #+#             */
-/*   Updated: 2022/08/30 19:50:06 by dduvivie         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:58:24 by dduvivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -20,9 +20,11 @@ void	free_str_array(char **t)
 	while (t[i] != NULL)
 	{
 		free(t[i]);
+		t[i] = NULL;
 		i++;
 	}
 	free(t);
+	t = NULL;
 }
 
 /* Free args struct memory */
@@ -52,6 +54,7 @@ void	free_stack(t_stack *stack, int error_flag)
 		prev_node = current_node;
 		current_node = current_node->next;
 		free(prev_node);
+		prev_node = NULL;
 	}
 	if (error_flag == 1)
 		exit(1);
