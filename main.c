@@ -6,7 +6,7 @@
 /*   By: dduvivie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:57:05 by dduvivie          #+#    #+#             */
-/*   Updated: 2022/08/15 19:50:06 by dduvivie         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:26:44 by dduvivie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -33,6 +33,7 @@ int	main(int argc, char *argv[])
 	start_sort(&stack_a, &stack_b);
 	free_stack(&stack_a, 0);
 	free_stack(&stack_b, 0);
-	system("leaks push_swap > .leaks_log.txt");
 	return (0);
 }
+
+/*system("leaks push_swap > .leaks_log.txt");*/
