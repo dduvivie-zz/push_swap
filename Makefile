@@ -18,8 +18,8 @@ CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 
 SRC			= main.c 			\
+			get_int_array.c		\
 			check_args.c 		\
-			check_args_utils.c	\
 			stack_init.c 		\
 			stack_utils.c 		\
 			set_node_order.c 	\
@@ -29,8 +29,9 @@ SRC			= main.c 			\
 			sort_radix.c 		\
 			sort_5_int.c 		\
 			sort_4_int.c 		\
-			sort_less_3_int.c
-			
+			sort_less_3_int.c	\
+			free_malloc.c
+
 OBJ			= $(SRC:.c=.o)
 
 all: $(NAME)
