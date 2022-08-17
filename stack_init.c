@@ -31,7 +31,10 @@ void	add_node(t_stack *stack, int val)
 	if (stack->head == NULL && stack->tail == NULL)
 	{
 		stack->head = new_node(val);
+		if (stack->head == NULL)
+			free_stack(stack, 1);
 		stack->tail = stack->head;
+
 	}
 	else
 	{
